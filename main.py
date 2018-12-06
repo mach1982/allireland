@@ -19,7 +19,6 @@ def get_choice():
 		try:
 			option = input("Enter your option A-F or Q\n")
 			option = option.lower()
-			print(option)
 			if option not in options:
 				raise ValueError
 			choice = False
@@ -167,10 +166,13 @@ while(run_program):
 		print("Good bye!!")
 
 	elif option== 'a':
-		print("The following Counties are and in the All Ireland\n{} ".format(get_county()))
-	
-	elif option== 'b':
+		print("\nThe following Counties are and in the All Ireland\n{} ".format(get_county()))
+	elif option == 'b':
 		print("\nTotal number of All Ireland titles won:\n {}".format(total_titles()))
+	elif option == 'c':
+		print("\nThe county with the most All irelnad is:{}\n".format(most_titles()))
+	elif  option == 'd':
+		print("\nList of  counties , from mos wins to least{}\n".format(mostToLeast()))
 
 
 
