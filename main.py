@@ -62,7 +62,7 @@ def no_of_titles(no_of_titles_won):
 	''' Display the couties who won X number of title . ie Dublin won 28  '''
 	print("Workining .....")
 	for k, v in allireland.allireland_winners.items():
-		if k== no_of_titles_won:
+		if v== no_of_titles_won:
 			print(k)
 	
 
@@ -155,6 +155,7 @@ def add_title_to(x):
 run_program = True
 
 print('WELECOME\n')
+print(add_title_to(1))
 
 while(run_program):
 	instruction()
@@ -172,13 +173,22 @@ while(run_program):
 	elif option == 'c':
 		print("\nThe county with the most All irelnad is:{}\n".format(most_titles()))
 	elif  option == 'd':
-		print("\nList of  counties , from mos wins to least{}\n".format(mostToLeast()))
-
-
-
-#print("The totla number of All Ireland Titles are {}".format(total_titles()))
-
-#no_of_titles('')
+		print("\nList of  counties , from most wins to least{}\n".format(mostToLeast()))
+	elif  option == 'e':
+		x =input("Enter  number of tiles :\n")
+		print(no_of_titles(int(x)))
+	elif  option == 'f':
+		prov =input("Enter  provance name  :\n")
+		prov=prov.lower()
+		
+		if prov == 'ulster':
+			print(f'{prov}  has : {no_of_ulster_wins()} \n')
+		elif prov == 'connacht':
+			print(f'{prov}  has : {no_of_connacht_wins()} \n')
+		elif prov == 'munster':
+			print(f'{prov}  has : {no_of_munster_wins()} \n')
+		elif prov == 'leinster':
+			print(f'{prov}  has : {no_of_leinster_wins()} \n')
 
 		
 		
